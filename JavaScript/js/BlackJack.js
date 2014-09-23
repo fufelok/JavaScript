@@ -1,5 +1,7 @@
 'use strict';
 console.log('***-------Black Jack ♡♢♠♣-------***');
+// Osama *****jhghjkghjfdhs
+// 
 var cards = [{
 	name: '♡A',
 	value: 11
