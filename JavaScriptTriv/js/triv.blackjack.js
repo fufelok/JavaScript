@@ -37,6 +37,8 @@ triv.blackjack = (function () {
 	console.log('***************************************');
 	console.log('***************************************');
 
+
+
 	if (playerPoints === 22) {
 		playerPoints = 12;
 	}
@@ -94,7 +96,7 @@ triv.blackjack = (function () {
 				console.log('Computer has ' + computerPoints + ' points.');
 
 				// Check computers points and keep or pop card!
-				do {
+				if (computerPoints < 22) {
 					drawCard(computerCards);
 					computerPoints = computerPoints + computerCards[computerCards.length - 1].value;
 					if (computerPoints > 21) {
@@ -103,7 +105,9 @@ triv.blackjack = (function () {
 							computerPoints = computerPoints - 10;
 						}
 					}
-				} while (computerPoints < 22);
+
+				}
+
 
 				if (computerPoints > 21) {
 					computerPoints = computerPoints - computerCards[computerCards.length - 1].value;
